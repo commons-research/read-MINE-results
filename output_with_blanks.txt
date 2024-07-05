@@ -1,0 +1,120 @@
+following files will be searched: 
+/home/pamrein/2024_masterthesis/MINE-Database/data/output/metacyc_generalized/20240601_lotus_generalized_n45/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_*1.csv*.parquet
+duplicates in ID
+
+shape: (24_464_171, 2)
+┌─────────────┬─────┐
+│ ID          ┆ len │
+│ ---         ┆ --- │
+│ str         ┆ u32 │
+╞═════════════╪═════╡
+│ pkc16439361 ┆ 5   │
+│ pkc6454261  ┆ 5   │
+│ pkc8883146  ┆ 5   │
+│ pkc3213843  ┆ 5   │
+│ pkc13410332 ┆ 5   │
+│ …           ┆ …   │
+│ pkc13707417 ┆ 5   │
+│ pkc6488868  ┆ 5   │
+│ pkc9102605  ┆ 5   │
+│ pkc22862742 ┆ 5   │
+│ pkc23075452 ┆ 5   │
+└─────────────┴─────┘
+---
+
+duplicates in Type
+
+shape: (1, 2)
+┌───────────┬───────────┐
+│ Type      ┆ len       │
+│ ---       ┆ ---       │
+│ str       ┆ u32       │
+╞═══════════╪═══════════╡
+│ Predicted ┆ 120378471 │
+└───────────┴───────────┘
+---
+
+duplicates in Generation
+
+shape: (1, 2)
+┌────────────┬───────────┐
+│ Generation ┆ len       │
+│ ---        ┆ ---       │
+│ i64        ┆ u32       │
+╞════════════╪═══════════╡
+│ 1          ┆ 120378471 │
+└────────────┴───────────┘
+---
+
+duplicates in Formula
+
+shape: (485_780, 2)
+┌───────────────────┬──────┐
+│ Formula           ┆ len  │
+│ ---               ┆ ---  │
+│ str               ┆ u32  │
+╞═══════════════════╪══════╡
+│ C65H95N16O27P3S   ┆ 2    │
+│ C63H100N2O20      ┆ 3    │
+│ C111H97N28O24S10+ ┆ 5    │
+│ C5H12OS2          ┆ 10   │
+│ C47H88O11         ┆ 51   │
+│ …                 ┆ …    │
+│ C89H137N21O26     ┆ 20   │
+│ C142H218O56       ┆ 1134 │
+│ C61H46O41S        ┆ 22   │
+│ C35H69N3O3        ┆ 23   │
+│ C84H130Cl2N14O25  ┆ 32   │
+└───────────────────┴──────┘
+---
+
+duplicates in InChIKey
+
+shape: (5_856_617, 2)
+┌─────────────────────────────┬─────┐
+│ InChIKey                    ┆ len │
+│ ---                         ┆ --- │
+│ str                         ┆ u32 │
+╞═════════════════════════════╪═════╡
+│ XJAIHBWITJAOQF-UHFFFAOYSA-N ┆ 2   │
+│ MRYCLYCFVALGFB-UHFFFAOYSA-N ┆ 2   │
+│ ZSKMKHXBXWBJMQ-UHFFFAOYSA-N ┆ 2   │
+│ HMLBMMGPRFFISM-UHFFFAOYSA-N ┆ 2   │
+│ IKCSZYXKKOLDKM-UHFFFAOYSA-N ┆ 2   │
+│ …                           ┆ …   │
+│ HBHAKAWTWGEXDE-UHFFFAOYSA-N ┆ 2   │
+│ SDQOCEBEXFQPGG-UHFFFAOYSA-N ┆ 2   │
+│ BDYGZWMXJNYJJR-UHFFFAOYSA-N ┆ 2   │
+│ DJCHOQWYWOIDSK-UHFFFAOYSA-N ┆ 2   │
+│ SZLDXHGVVJWQGJ-UHFFFAOYSA-N ┆ 2   │
+└─────────────────────────────┴─────┘
+---
+
+duplicates in SMILES
+
+shape: (5_855_172, 2)
+┌─────────────────────────────────┬─────┐
+│ SMILES                          ┆ len │
+│ ---                             ┆ --- │
+│ str                             ┆ u32 │
+╞═════════════════════════════════╪═════╡
+│ CCN1CC2CCC(OC)C34C5CC6C(OC)CC(… ┆ 2   │
+│ CC(CCC1(C)CCC2(C(=O)O)CCC(C)(C… ┆ 2   │
+│ CC1=CC2(O)C(O)(OC1)C(C)C1CCC(C… ┆ 2   │
+│ CCOC12CC(OC)C3(O)CC(C1C3OC(=O)… ┆ 2   │
+│ Cc1c2oc3c(C)ccc(C(=O)NC4C(=O)N… ┆ 2   │
+│ …                               ┆ …   │
+│ CC1CCC2C(C)C3C(CC4CCC=C5CC6CCC… ┆ 2   │
+│ CC1OC(OC2CCC3(C=O)C4CCC5(C)C(C… ┆ 2   │
+│ COC(=O)C1C2=C(C=CC(=O)OC(Cc3cc… ┆ 2   │
+│ CCC(C)C(NC(=O)C(C)(C)NC(=O)C(C… ┆ 2   │
+│ COC(C)(C)CC1C2C3C4C(O)C3(C)CC1… ┆ 2   │
+└─────────────────────────────────┴─────┘
+---
+
+Traceback (most recent call last):
+  File "/data/users/pamrein/2024_masterthesis/read-MINE-results/read_mine_results/polars/main_polars_statistics.py", line 85, in <module>
+    df_blanks = check_for_blanks(df_predicted)
+  File "/data/users/pamrein/2024_masterthesis/read-MINE-results/read_mine_results/polars/main_polars_statistics.py", line 53, in check_for_blanks
+    .for_each(lambda df: df.filter(
+AttributeError: 'LazyFrame' object has no attribute 'for_each'

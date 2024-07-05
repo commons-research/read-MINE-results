@@ -1,0 +1,115 @@
+following files will be searched: 
+/home/pamrein/2024_masterthesis/MINE-Database/data/output/metacyc_generalized/20240601_lotus_generalized_n45/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_*.parquet
+duplicates in ID
+
+shape: (25_088_764, 2)
+┌─────────────┬─────┐
+│ ID          ┆ len │
+│ ---         ┆ --- │
+│ str         ┆ u32 │
+╞═════════════╪═════╡
+│ pkc22078291 ┆ 44  │
+│ pkc7503109  ┆ 44  │
+│ pkc7307623  ┆ 44  │
+│ pkc24091090 ┆ 22  │
+│ pkc8325707  ┆ 44  │
+│ …           ┆ …   │
+│ pkc23733794 ┆ 37  │
+│ pkc2637214  ┆ 45  │
+│ pkc20891391 ┆ 44  │
+│ pkc14959108 ┆ 44  │
+│ pkc7534915  ┆ 44  │
+└─────────────┴─────┘
+---
+
+duplicates in Type
+
+shape: (1, 2)
+┌───────────┬────────────┐
+│ Type      ┆ len        │
+│ ---       ┆ ---        │
+│ str       ┆ u32        │
+╞═══════════╪════════════╡
+│ Predicted ┆ 1066311368 │
+└───────────┴────────────┘
+---
+
+duplicates in Generation
+
+shape: (1, 2)
+┌────────────┬────────────┐
+│ Generation ┆ len        │
+│ ---        ┆ ---        │
+│ i64        ┆ u32        │
+╞════════════╪════════════╡
+│ 1          ┆ 1066311368 │
+└────────────┴────────────┘
+---
+
+duplicates in Formula
+
+shape: (1_666_731, 2)
+┌─────────────────┬──────┐
+│ Formula         ┆ len  │
+│ ---             ┆ ---  │
+│ str             ┆ u32  │
+╞═════════════════╪══════╡
+│ C99H176N14O25   ┆ 4    │
+│ C37H76O15P2     ┆ 3    │
+│ C71H89ClN6O14   ┆ 25   │
+│ C83H58O54       ┆ 3689 │
+│ C44H59N3O10     ┆ 121  │
+│ …               ┆ …    │
+│ C98H144N20O32   ┆ 45   │
+│ C62H99N19O26S   ┆ 2    │
+│ C42H54NO14+     ┆ 19   │
+│ C84H150N2O38    ┆ 6    │
+│ C76H124N7O38P3S ┆ 937  │
+└─────────────────┴──────┘
+---
+
+duplicates in InChIKey
+
+shape: (217_406_334, 2)
+┌─────────────────────────────┬─────┐
+│ InChIKey                    ┆ len │
+│ ---                         ┆ --- │
+│ str                         ┆ u32 │
+╞═════════════════════════════╪═════╡
+│ XUOCVBQYPNHSQU-MTWHSEOLSA-N ┆ 3   │
+│ YJQLEYHPQODOOQ-UHFFFAOYSA-N ┆ 3   │
+│ LRADJEPNVLZVAP-UHFFFAOYSA-N ┆ 4   │
+│ YSECJFUIMQSSNW-UHFFFAOYSA-P ┆ 2   │
+│ ILVMALMKFUWRRR-UHFFFAOYSA-N ┆ 2   │
+│ …                           ┆ …   │
+│ PLNBMPBUUFFFCZ-UHFFFAOYSA-N ┆ 2   │
+│ LKJUTBWQTKRRRB-UHFFFAOYSA-N ┆ 2   │
+│ QWZRTBPKBMPASQ-UHFFFAOYSA-N ┆ 2   │
+│ NZDWSYHCUDTJDY-UHFFFAOYSA-N ┆ 3   │
+│ NCXSJGCCNJLOBW-UHFFFAOYSA-N ┆ 4   │
+└─────────────────────────────┴─────┘
+---
+
+duplicates in SMILES
+
+shape: (217_345_039, 2)
+┌─────────────────────────────────┬─────┐
+│ SMILES                          ┆ len │
+│ ---                             ┆ --- │
+│ str                             ┆ u32 │
+╞═════════════════════════════════╪═════╡
+│ CC(C)=CCC1CC(C)=CC2OC3CC4OC(=O… ┆ 5   │
+│ CC1=C(C)C2C(Cc3ccccc3)NC(=O)C2… ┆ 2   │
+│ CC1=CC=CC2C(C)C3C(C4=C(C)CC(O)… ┆ 8   │
+│ C#CC=CCCCCCCCCCCCCCCC=CCCCC=CC… ┆ 3   │
+│ CC(C)CCCCCCCCCC1CC(=O)NC(CC(N)… ┆ 2   │
+│ …                               ┆ …   │
+│ CC(CCCCCCCCCCCCCCC(O)C(O)CCCCC… ┆ 2   │
+│ CCC(CC)CCC(C)C1CCC2C3CC=C4C(C)… ┆ 2   │
+│ CC1OC(OC2C(OC(=O)C34CCC(C)(C)C… ┆ 2   │
+│ COC1=C(NCC(=O)OC2C(O)C(O)C(O)O… ┆ 2   │
+│ CC1C(O)CC(C)C2(C)C1CCC1(C)C2CC… ┆ 2   │
+└─────────────────────────────────┴─────┘
+---
+
+Elapsed time:  3414.92 seconds
