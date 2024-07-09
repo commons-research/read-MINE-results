@@ -16,8 +16,12 @@ import polars as pl
 import os
 import re
 import sys
+import re
 
 pl.Config(fmt_str_lengths=550)
+pl.Config.set_tbl_rows(100)
+
+
 
 
 
@@ -34,6 +38,9 @@ def lazyread_mines_parquet(parquet_file):
     Improvments:
         - if path is longer, it should only check for the filnema if compounds or reaction...
     """
+
+    # all(substring in item for item in lst)
+    # in the moment doesn't works for lists
     if "compounds" in parquet_file:
         print(f'Compound file - filter for predicted compounds - read in : {parquet_file}')
         lazy_df = (
@@ -44,6 +51,7 @@ def lazyread_mines_parquet(parquet_file):
         print(f'Reaction file read in : {parquet_file}')
         lazy_df = (
             pl.scan_parquet(parquet_file)
+            .drop("Name")
             )
     else:
         print(f'other file - read in :\n {parquet_file}')
@@ -87,6 +95,109 @@ def find_two_chars_after_word(text, word):
             return None
     else:
         return None
+
+
+def reorder(row):
+        col1_value, col2_value = row[0], row[1]
+        col1_suffix = int(col1_value.split('_')[1])
+        # col2_suffix = int(col2_value.split('_')[1])
+        
+        if col1_suffix == "02":
+            return col1_value
+        else:
+            return col2_value
+
+
+
+def get_merged_compoundfile(compoundfile, merged_in_compoundfile, equal_columns = ['Formula', 'InChIKey', 'SMILES'], info = False):
+    # read both files at once
+    lf_compound = lazyread_mines_parquet([compoundfile, merged_in_compoundfile])
+
+    # duplicate is not in lazyframe (collecting step should be in the end if possible)
+    df_compounds = lf_compound.select(['ID', 'Formula', 'InChIKey', 'SMILES']).collect(streaming = True)
+    
+    # find duplicates in compounds
+    duplicated_compounds = df_compounds.filter(pl.lit(df_compounds.select(equal_columns).is_duplicated())).sort(equal_columns)
+
+    # we don't want multiple replicates (like 3x...)
+    check_if_only_duplicates = lf_compound.group_by(equal_columns).agg(pl.len().alias("count")).filter(pl.col("count") > 1).select("count").unique().collect().item()
+            
+    if (check_if_only_duplicates == 2):
+        # Extract the first and the second values from duplicates
+
+        # Add an index column
+        duplicated_compounds = duplicated_compounds.with_row_index("index")
+
+        # Filter for odd indices
+        odd_indices_df = duplicated_compounds.filter(pl.col("index") % 2 != 0).select(pl.col("ID").alias("compound_1"))
+
+        # Filter for even indices
+        even_indices_df = duplicated_compounds.filter(pl.col("index") % 2 == 0).select(pl.col("ID").alias("compound_2"))
+
+        # Combine the two DataFrames
+        combined_df = pl.concat([odd_indices_df, even_indices_df], how="horizontal")
+
+        # print("dataframe to tranform at list:", combined_df)
+
+        # reorder the files        
+        pattern_two_characters_after_split = rf"_split_(.{{{2}}})"
+        filenumbers_compound_1 = re.search(pattern_two_characters_after_split, compoundfile)
+        if filenumbers_compound_1:
+            filenumber_compound_1 = filenumbers_compound_1.group(1)
+            print(f"The characters following '{compoundfile}' we found: '{filenumber_compound_1}'")
+        else:
+            print(f"The word '{result}' was not found in the text.")
+
+        # print(f"original: {filenumbers_compound_1}")
+
+        condition_wrong_sorted = (
+            pl.col("compound_2").str.ends_with(filenumber_compound_1)
+        )
+
+        # Apply the filter condition 
+        compounds_to_rename = combined_df.filter(condition_wrong_sorted).select([
+            pl.col("compound_2").alias("compound_1"),
+            pl.col("compound_1").alias("compound_2")
+        ])
+
+        compounds_to_not_rename = combined_df.filter(~condition_wrong_sorted)
+
+        duplicated_compounds_df = pl.DataFrame({
+            "compound_1": pl.concat([compounds_to_rename.select(["compound_1"]), compounds_to_not_rename.select(["compound_1"])]),
+            "compound_2": pl.concat([compounds_to_rename.select(["compound_2"]), compounds_to_not_rename.select(["compound_2"])])
+        })        
+
+        # Get even rows
+        second_compound = duplicated_compounds_df["compound_2"].to_list() 
+
+        # Get odd rows
+        first_compound = duplicated_compounds_df["compound_1"].to_list() 
+
+        # Create a dictionary from the two lists
+        compounds_to_rename = dict(zip(first_compound, second_compound))
+
+
+        # # Get information about the compounds
+        # print(compounds_to_rename)
+        # print(compounds_to_not_rename)
+        # print(duplicated_compounds_df)
+        # feedback = list(compounds_to_rename.items())[:15]
+        # print(feedback)
+
+    else:
+        sys.exit("More duplicates then expected:", check_if_only_duplicates)
+
+    if info:
+        all_compounds = df_compounds.shape[0]
+        duplicated_compounds = int(duplicated_compounds.shape[0] / 2)
+        unique_compounds = lf_compound.select(equal_columns).unique().collect().shape[0]
+
+        filename_1 = compoundfile.split("/")[-1]
+        filename_2 = merged_in_compoundfile.split("/")[-1]
+
+        print(f'File 1: {filename_1},\nFile 2: {filename_2}\nTotal: {all_compounds:_d}\nunique compounds: {unique_compounds:_d} ({duplicated_compounds/all_compounds*100:.2f} % - {duplicated_compounds:_d} duplicates)\n-----')
+
+    return first_compound, second_compound #compounds_to_rename
 
 
 # def rename_compounds(compoundfile, suffix, output_file = ""):
@@ -160,139 +271,85 @@ for file in filenames:
 reaction_files.sort()
 compound_files.sort()
 
-# find the pairs and put them togheter
+compound_files2 = compound_files.copy()
+
+removed_compounds = list()
+
+# go through all the files
 for compoundfile1 in compound_files:
 
-    for compoundfile2 in compound_files:
+    # remove the compound from the list for better performance
+    compound_files2.remove(compoundfile1)
 
-        # if the same file, go to the next file
-        if compoundfile1 == compoundfile2:
-            continue
-
-        # read both files at once
-        lf_compound = lazyread_mines_parquet([compoundfile1, compoundfile2])
-
-        # duplicate is not in lazyframe (collecting step should be in the end if possible)
-        df = lf_compound.select(['ID', 'Formula', 'InChIKey', 'SMILES']).collect(streaming = True)
-        
-        # columns for compounds: ['ID', 'Type', 'Generation', 'Formula', 'InChIKey', 'SMILES']
-        cp_columns_equal = ['Formula', 'InChIKey', 'SMILES']
-
-        # find duplicates in compounds
-        duplicated_compounds = df.filter(pl.lit(df.select(cp_columns_equal).is_duplicated())).sort(cp_columns_equal)
-
-        # get the unique compounds
-        compounds_unique = lf_compound.select(['ID', 'Formula', 'InChIKey', 'SMILES']).unique(subset=cp_columns_equal).sort(cp_columns_equal).collect(streaming = True)
-
-
-        # df_duplicated_compounds = lf_compound.filter(pl.all_horizontal(pl.col(cp_columns_equal).is_duplicated())).collect(streaming = True)
-        # df_unique_compounds = lf_compound.unique(subset=cp_columns_equal).collect(streaming = True)
+    for compoundfile2 in compound_files2:
  
-        
+        # compounds_dict_to_rename
+        first_compound_duplicates, second_compound_duplicates = get_merged_compoundfile(compoundfile1, compoundfile2, info = True)
 
-        # df_compound_duplicate = df_compound.filter(df_compound.is_duplicated(cp_columns_equal))
+        # drop all duplicates from the second file (compoundfile2)
+        df_compoundfile2 = lazyread_mines_parquet(compoundfile2)
+        df_compoundfile2 = df_compoundfile2.filter(pl.col("ID").is_in(first_compound_duplicates))
 
-        
-        # duplicates_in_unique = duplicated_compounds.join(compounds_unique, on=cp_columns_equal, how="inner").sort(cp_columns_equal)
+        # overwrite the existing file
+        df_compoundfile2.sink_parquet(compoundfile2) # + "_removed_duplicates.parquet")
 
-        # print("Duplicates:", duplicates_in_unique)
+        # find the reactionfile to rename (second file)
+        pattern_two_characters_after_split = rf"_split_(.{{{2}}})"
 
-        print(df.shape, duplicated_compounds)
-        print(compounds_unique)
-
-        # 'pkc19930364_00': 'pkc19395400_01', 'pkc3595900_01': 'pkc3693228_00', 'pkc18101948_01': 'pkc18601703_00'
-
-        # duplicates_df = lf_compound.group_by(cp_columns_equal).agg(pl.count().alias("count")).filter(pl.col("count") > 1).select(cp_columns_equal).collect()
-        duplicates_df = lf_compound.group_by(cp_columns_equal).agg(pl.len().alias("count")).filter(pl.col("count") > 1).select("count").unique().collect()
-        
-        if (duplicates_df.item() == 2):
-
-            # Extract the first and the second values from duplicates
-            # Get odd rows
-            first_values = duplicated_compounds.with_row_index().filter(pl.col("index") % 2 == 1)["ID"].to_list()
-
-            # Get even rows
-            second_values = duplicated_compounds.with_row_index().filter(pl.col("index") % 2 == 0)["ID"].to_list()
-
-            # Create a dictionary from the two lists
-            duplicates_dict = dict(zip(first_values, second_values))
-
-
-            print(duplicates_dict)
-
-            # rename the reactions
-            # load reactions
-            identifier_compound = find_two_chars_after_word(compoundfile1, "split_")
-
-            for reactionfile in reaction_files:
-
-                identifier_reaction = find_two_chars_after_word(reactionfile, "split_")
-
-                if identifier_reaction == identifier_compound:
-                    
-                    lf_reaction = lazyread_mines_parquet([compoundfile1, compoundfile2])
-
-
-
-                    # drop the value out of the list, if the pair was found
-                    reaction_files.remove(reactionfile)
-
-
-            lf_reaction = lazyread_mines_parquet([compoundfile1, compoundfile2])
-
-            df 
-
+        filenumbers_compound_2 = re.search(pattern_two_characters_after_split, compoundfile2)
+        if filenumbers_compound_2:
+            filenumbers_compound_2 = filenumbers_compound_2.group(1)
+            print(f"The characters following '{compoundfile2}' we found: '{filenumbers_compound_2}'")
         else:
-            sys.exit("More duplicates then expected:", duplicates_df.item() == 2)
+            print(f"The word '{result}' was not found in the text.")
 
-
-        # if (duplicates_df.item() == 2) and (duplicates_df.shape == (1, 1)):  
-        # 'pkc20932279_00': 'pkc20368597_01', 'pkc19930364_00': 'pkc19395400_01', 'pkc3595900_01': 'pkc3693228_00', 'pkc18101948_01': 'pkc18601703_00'
-        #     entries = duplicated_compounds.select(pl.col("ID")).item()
-        #     print("Yes, you are right!!!", entries)
-
-        #     correspondence_dict = {entries[i]: entries[i + 1] for i in range(0, len(entries), 2)}
-
-        # Drop duplicates from the original LazyFrame
-        # unique_df = lf_compound.unique()
-
-        # unique_df = unique_df.collect()
-
-        # cp_dp_am = cp_dp_am.shape[0]
-        # cp_un_am = df_unique_compounds.shape[0]
-
-        # print(f"duplicated compounds: {cp_dp_am}")
-        # print(f"unique compounds: {cp_un_am}")
-
-        # df_compound = lf_compound.collect(streaming = True)
-        # print(f'total: {df_compound.shape} - [ {cp_dp_am + cp_un_am} ]')
-
-
-
-
-
-
-# for reactionfile in reaction_files:
-#     # read file
-#     lf_reaction = lazyread_mines_parquet(reactionfile)
-
-#     # ['ID', 'Type', 'Generation', 'Formula', 'InChIKey', 'SMILES']
-#     re_columns_equal = ['Formula', 'InChIKey', 'SMILES']
-    
-# ['ID', 'Name', 'ID equation', 'SMILES equation', 'Rxn hash', 'Reaction rules']
-# cp_columns_equal = ['ID equation', 'SMILES equation', 'Rxn hash', 'Reaction rules']
-
-# #     # find duplicates in reactions 
-
-    
-    
-    
-    
-#     if identifier_compound == identifier_reaction:
-            
-            
-#             rename_compounds(path_to_files + compoundfile, suffix = "_" + identifier_compound, output_file = path_to_save + compoundfile)
-#             rename_reactions(path_to_files + reactionfile, suffix = "_" + identifier_reaction, output_file = path_to_save + reactionfile)
+        search_file = "_split_" + filenumbers_compound_2
+        for filepath in reaction_files:
+            filename = filepath.split("/")[-1]
+            if search_file in filename:
+                reaction_file_to_rename = filepath
+                break
         
-#             # drop the value out of the list, if the pair was found
-#             reaction_files.remove(reactionfile)
+        print(f'our matches: {reaction_file_to_rename}')
+
+        # rename the second reactionfiles accordingly to the compoundfile
+        reaction_file_df = lazyread_mines_parquet(reaction_file_to_rename)
+
+        # # reaction_file_df['ID equation'] = reaction_file_df['ID equation'].replace(compounds_dict_to_rename)
+        # reaction_file_df = reaction_file_df.with_columns(pl.col(['ID equation']).replace(compounds_dict_to_rename))
+        # print(reaction_file_df)
+        # reaction_file_df1 = reaction_file_df.filter(pl.col(["ID equation"]).str.contains("_00]", literal=True))
+        # print(reaction_file_df1)
+
+        # values_to_find = list(compounds_dict_to_rename.values())
+        # reaction_file_df1 = reaction_file_df.filter(pl.col(["ID equation"]).str.contains_any(values_to_find))
+        # print(reaction_file_df1)
+
+        # Construct the replacement expression for each column
+        reaction_file_df1 = reaction_file_df.with_columns(
+        pl.col(["ID equation"]).str.replace_many(
+            second_compound_duplicates, first_compound_duplicates
+        )
+        .alias("ID equation")
+        )
+
+        reaction_file_df2 = reaction_file_df1.filter(pl.col(["ID equation"]).str.contains_any(first_compound_duplicates)).collect()
+        print("renamed reaction file:", reaction_file_df2)
+
+        # if duplicates in the reactions rules are find, drop them
+
+
+        reaction_file_df1.sink_parquet(reaction_file_to_rename)
+        print(f"reaction saved: {reaction_file_to_rename}")
+
+        # Qualitycheck, to see how many are changed and all the removed duplicates are removed.
+        removed_compounds.append(second_compound_duplicates)
+        renamed_compounds.append(first_compound_duplicates)
+
+        # reaction_file = reaction_files[]
+        # df = lazyread_mines_parquet(reaction_file)
+        # print(df)
+        # df = df.with_column(pl.col("ID equation").apply(lambda x: replace_chars(x, compounds_dict_to_rename)).alias("text"))
+        # print(df)
+
+        
