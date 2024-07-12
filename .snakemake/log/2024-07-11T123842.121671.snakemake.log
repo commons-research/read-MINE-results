@@ -1,0 +1,3 @@
+NameError in file /data/users/pamrein/2024_masterthesis/read-MINE-results/Snakefile, line 22:
+name 'output' is not defined
+  File "/data/users/pamrein/2024_masterthesis/read-MINE-results/Snakefile", line 22, in <module>

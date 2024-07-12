@@ -9,15 +9,21 @@
 # sys     1m7.996s
 
 # files for renaming should be in one folder (renamed files will be recognized)
-path_to_files = "/home/pamrein/2024_masterthesis/MINE-Database/data/output/metacyc_generalized/20240601_lotus_generalized_n45/"
-path_to_save = "/home/pamrein/2024_masterthesis/read-MINE-results/read_mine_results/db_files/"
+# path_to_files = "/home/pamrein/2024_masterthesis/MINE-Database/data/output/metacyc_generalized/20240601_lotus_generalized_n45/"
+# path_to_save = "/home/pamrein/2024_masterthesis/read-MINE-results/read_mine_results/db_files/"
 
-path_to_files = "/home/pamrein/2024_masterthesis/read-MINE-results/read_mine_results/db_files/original_files/"
-path_to_save = "/home/pamrein/2024_masterthesis/read-MINE-results/read_mine_results/db_files/renamed_files/"
+# path_to_files = "/home/pamrein/2024_masterthesis/read-MINE-results/read_mine_results/db_files/all_original_files/"
+# path_to_save = "/home/pamrein/2024_masterthesis/read-MINE-results/read_mine_results/db_files/all_original_files/"
+
 
 import polars as pl
 import os
 import re
+import sys
+
+path_to_files = sys.argv[1]
+path_to_save = sys.argv[2]
+
 
 pl.Config(fmt_str_lengths=550)
 
@@ -119,7 +125,7 @@ def rename_reactions(reactionfile, suffix, output_file = ""):
     )
 
     # Regex pattern to find 'pkc' followed by digits and '[c0]'
-    pattern = r"(pkc\d+)(\[c0\])" 
+    pattern = r"(pkc\d+)(\[c)" 
 
     # Define the replacement expressions for the column "ID equation"
     replacement_expr_pkc = pl.col("ID equation").str.replace_all(pattern, r"${1}_XXX-pkc-XXX_${2}") 

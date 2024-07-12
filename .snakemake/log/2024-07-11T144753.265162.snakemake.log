@@ -1,0 +1,1111 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 5
+Job stats:
+job                               count
+------------------------------  -------
+all                                   1
+remove_duplicates                    90
+rename_compounds_and_reactions       90
+total                               181
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:53 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    jobid: 26
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=6017, disk_mib=5739, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:53 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    jobid: 86
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2524, disk_mib=2408, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:53 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    jobid: 16
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2541, disk_mib=2424, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:53 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    jobid: 46
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5783, disk_mib=5516, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:53 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    jobid: 136
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5780, disk_mib=5513, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    jobid: 106
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5748, disk_mib=5482, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    jobid: 162
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5697, disk_mib=5434, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    jobid: 164
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2536, disk_mib=2419, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    jobid: 166
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5863, disk_mib=5592, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    jobid: 76
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5823, disk_mib=5554, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    jobid: 134
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2403, disk_mib=2292, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    jobid: 146
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2511, disk_mib=2395, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    jobid: 12
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2457, disk_mib=2344, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    jobid: 74
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5835, disk_mib=5565, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    jobid: 48
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5988, disk_mib=5711, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    jobid: 22
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5904, disk_mib=5631, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    jobid: 82
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2620, disk_mib=2499, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    jobid: 66
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2480, disk_mib=2366, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    jobid: 52
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5701, disk_mib=5437, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    jobid: 112
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=1000, disk_mib=954, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    jobid: 142
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5634, disk_mib=5374, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    jobid: 6
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2585, disk_mib=2466, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    jobid: 104
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5834, disk_mib=5564, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    jobid: 14
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2523, disk_mib=2407, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    jobid: 172
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2459, disk_mib=2346, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    jobid: 174
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=6047, disk_mib=5767, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    jobid: 148
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2571, disk_mib=2452, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    jobid: 30
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2510, disk_mib=2394, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    jobid: 156
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2483, disk_mib=2368, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    jobid: 44
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2589, disk_mib=2470, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    jobid: 144
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2526, disk_mib=2409, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    jobid: 80
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5726, disk_mib=5461, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    jobid: 32
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5699, disk_mib=5435, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    jobid: 170
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5751, disk_mib=5485, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    jobid: 140
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2505, disk_mib=2389, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    jobid: 28
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5765, disk_mib=5498, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    jobid: 88
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2522, disk_mib=2406, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    jobid: 58
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2557, disk_mib=2439, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    jobid: 60
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2489, disk_mib=2374, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    jobid: 20
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5587, disk_mib=5329, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    jobid: 118
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5716, disk_mib=5452, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    jobid: 178
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5901, disk_mib=5628, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    jobid: 50
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2477, disk_mib=2363, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    jobid: 180
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2414, disk_mib=2303, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    jobid: 110
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5944, disk_mib=5669, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    jobid: 114
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2523, disk_mib=2407, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    jobid: 92
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5826, disk_mib=5557, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    jobid: 36
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5829, disk_mib=5559, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    jobid: 132
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2443, disk_mib=2330, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    jobid: 72
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5807, disk_mib=5538, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    jobid: 90
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5919, disk_mib=5645, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    jobid: 152
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2525, disk_mib=2409, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    jobid: 96
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2680, disk_mib=2556, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    jobid: 126
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2446, disk_mib=2333, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    jobid: 8
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2411, disk_mib=2300, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    jobid: 150
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=6131, disk_mib=5847, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    jobid: 2
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2562, disk_mib=2444, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    jobid: 68
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=1000, disk_mib=954, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    jobid: 42
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5598, disk_mib=5339, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    jobid: 102
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5606, disk_mib=5347, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    jobid: 64
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5757, disk_mib=5491, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    jobid: 100
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5668, disk_mib=5406, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    jobid: 130
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5871, disk_mib=5600, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    jobid: 10
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2527, disk_mib=2410, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    jobid: 70
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2527, disk_mib=2410, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    jobid: 54
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2520, disk_mib=2404, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    jobid: 160
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5836, disk_mib=5566, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    jobid: 168
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5983, disk_mib=5706, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    jobid: 18
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2563, disk_mib=2445, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    jobid: 108
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2486, disk_mib=2371, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    jobid: 176
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2385, disk_mib=2275, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:54 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    jobid: 56
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5840, disk_mib=5570, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    jobid: 116
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5837, disk_mib=5567, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    jobid: 128
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2451, disk_mib=2338, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    jobid: 138
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5866, disk_mib=5595, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    jobid: 24
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2226, disk_mib=2123, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    jobid: 84
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5857, disk_mib=5586, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    jobid: 38
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2530, disk_mib=2413, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    jobid: 98
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5828, disk_mib=5559, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    jobid: 158
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2519, disk_mib=2403, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    jobid: 120
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5785, disk_mib=5518, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    jobid: 62
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2451, disk_mib=2338, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    jobid: 34
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5851, disk_mib=5580, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    jobid: 122
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2512, disk_mib=2396, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    jobid: 94
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5240, disk_mib=4998, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Select jobs to execute...
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    jobid: 154
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5869, disk_mib=5598, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    jobid: 4
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2607, disk_mib=2487, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    jobid: 124
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2526, disk_mib=2409, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    jobid: 40
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=2475, disk_mib=2361, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+
+[Thu Jul 11 14:47:55 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    jobid: 78
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_
+    resources: mem_mb=1000000, mem_mib=953675, disk_mb=5944, disk_mib=5669, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 1):
+
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-07-11T144753.265162.snakemake.log

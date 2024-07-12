@@ -1,0 +1,3 @@
+RuleException in file /data/users/pamrein/2024_masterthesis/read-MINE-results/Snakefile, line 39:
+Resources values have to be integers, strings, or callables (functions)
+  File "/data/users/pamrein/2024_masterthesis/read-MINE-results/Snakefile", line 39, in <module>

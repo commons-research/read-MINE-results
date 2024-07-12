@@ -1,0 +1,24 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 5
+Job stats:
+job      count
+-----  -------
+hello        1
+total        1
+
+Select jobs to execute...
+
+[Thu Jul 11 12:36:08 2024]
+rule hello:
+    output: output/1.txt
+    jobid: 0
+    reason: Missing output files: output/1.txt
+    wildcards: num=1
+    resources: mem_mb=10, mem_mib=10, disk_mb=1000, disk_mib=954, tmpdir=<TBD>
+
+Submitted job 0 with external jobid 'Submitted batch job 12926914'.
+[Thu Jul 11 12:36:28 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2024-07-11T123607.789204.snakemake.log

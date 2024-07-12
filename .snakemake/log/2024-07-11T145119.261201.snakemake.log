@@ -1,0 +1,2209 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 5
+Job stats:
+job                               count
+------------------------------  -------
+all                                   1
+remove_duplicates                    90
+rename_compounds_and_reactions       90
+total                               181
+
+Select jobs to execute...
+
+[Thu Jul 11 14:51:21 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    jobid: 26
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=6017, disk_mib=5739, tmpdir=<TBD>
+
+Submitted job 26 with external jobid 'Submitted batch job 12929343'.
+
+[Thu Jul 11 14:51:21 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    jobid: 86
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2524, disk_mib=2408, tmpdir=<TBD>
+
+Submitted job 86 with external jobid 'Submitted batch job 12929344'.
+
+[Thu Jul 11 14:51:21 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    jobid: 16
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2541, disk_mib=2424, tmpdir=<TBD>
+
+Submitted job 16 with external jobid 'Submitted batch job 12929345'.
+
+[Thu Jul 11 14:51:21 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    jobid: 106
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5748, disk_mib=5482, tmpdir=<TBD>
+
+Submitted job 106 with external jobid 'Submitted batch job 12929346'.
+
+[Thu Jul 11 14:51:21 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    jobid: 76
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5823, disk_mib=5554, tmpdir=<TBD>
+
+Submitted job 76 with external jobid 'Submitted batch job 12929347'.
+[Thu Jul 11 14:51:30 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 26
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929343
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 26, external: Submitted batch job 12929343, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.26.sh). For error details see the cluster log and the log files of the involved rule(s).
+Select jobs to execute...
+[Thu Jul 11 14:51:30 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 86
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929344
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 86, external: Submitted batch job 12929344, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.86.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:51:30 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 16
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929345
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 16, external: Submitted batch job 12929345, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.16.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:51:30 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 106
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929346
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 106, external: Submitted batch job 12929346, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.106.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:51:30 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 76
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929347
+
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 76, external: Submitted batch job 12929347, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.76.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:51:30 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    jobid: 54
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2520, disk_mib=2404, tmpdir=<TBD>
+
+Submitted job 54 with external jobid 'Submitted batch job 12929366'.
+Select jobs to execute...
+
+[Thu Jul 11 14:51:30 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    jobid: 46
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5783, disk_mib=5516, tmpdir=<TBD>
+
+Submitted job 46 with external jobid 'Submitted batch job 12929367'.
+
+[Thu Jul 11 14:51:30 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    jobid: 136
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5780, disk_mib=5513, tmpdir=<TBD>
+
+Submitted job 136 with external jobid 'Submitted batch job 12929368'.
+
+[Thu Jul 11 14:51:30 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    jobid: 162
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5697, disk_mib=5434, tmpdir=<TBD>
+
+Submitted job 162 with external jobid 'Submitted batch job 12929369'.
+
+[Thu Jul 11 14:51:30 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    jobid: 166
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5863, disk_mib=5592, tmpdir=<TBD>
+
+Submitted job 166 with external jobid 'Submitted batch job 12929370'.
+Select jobs to execute...
+[Thu Jul 11 14:51:40 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 54
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929366
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 54, external: Submitted batch job 12929366, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.54.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:51:40 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 46
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929367
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 46, external: Submitted batch job 12929367, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.46.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:51:40 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 136
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929368
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 136, external: Submitted batch job 12929368, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.136.sh). For error details see the cluster log and the log files of the involved rule(s).
+
+[Thu Jul 11 14:51:40 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    jobid: 94
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5240, disk_mib=4998, tmpdir=<TBD>
+
+[Thu Jul 11 14:51:40 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 162
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929369
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 162, external: Submitted batch job 12929369, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.162.sh). For error details see the cluster log and the log files of the involved rule(s).
+Submitted job 94 with external jobid 'Submitted batch job 12929371'.
+[Thu Jul 11 14:51:40 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 166
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929370
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 166, external: Submitted batch job 12929370, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.166.sh). For error details see the cluster log and the log files of the involved rule(s).
+Select jobs to execute...
+
+[Thu Jul 11 14:51:40 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    jobid: 72
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5807, disk_mib=5538, tmpdir=<TBD>
+
+Submitted job 72 with external jobid 'Submitted batch job 12929372'.
+
+[Thu Jul 11 14:51:40 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    jobid: 164
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2536, disk_mib=2419, tmpdir=<TBD>
+
+Submitted job 164 with external jobid 'Submitted batch job 12929373'.
+
+[Thu Jul 11 14:51:40 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    jobid: 48
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5988, disk_mib=5711, tmpdir=<TBD>
+
+Submitted job 48 with external jobid 'Submitted batch job 12929374'.
+
+[Thu Jul 11 14:51:41 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    jobid: 56
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5840, disk_mib=5570, tmpdir=<TBD>
+
+Submitted job 56 with external jobid 'Submitted batch job 12929375'.
+Select jobs to execute...
+[Thu Jul 11 14:51:50 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 94
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929371
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 94, external: Submitted batch job 12929371, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.94.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:51:50 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 72
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929372
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 72, external: Submitted batch job 12929372, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.72.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:51:50 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 164
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929373
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 164, external: Submitted batch job 12929373, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.164.sh). For error details see the cluster log and the log files of the involved rule(s).
+
+[Thu Jul 11 14:51:50 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    jobid: 64
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5757, disk_mib=5491, tmpdir=<TBD>
+
+[Thu Jul 11 14:51:50 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 48
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929374
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 48, external: Submitted batch job 12929374, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.48.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:51:50 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 56
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929375
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 56, external: Submitted batch job 12929375, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.56.sh). For error details see the cluster log and the log files of the involved rule(s).
+Submitted job 64 with external jobid 'Submitted batch job 12929376'.
+Select jobs to execute...
+
+[Thu Jul 11 14:51:51 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    jobid: 22
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5904, disk_mib=5631, tmpdir=<TBD>
+
+Submitted job 22 with external jobid 'Submitted batch job 12929377'.
+
+[Thu Jul 11 14:51:51 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    jobid: 142
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5634, disk_mib=5374, tmpdir=<TBD>
+
+Submitted job 142 with external jobid 'Submitted batch job 12929378'.
+
+[Thu Jul 11 14:51:51 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    jobid: 82
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2620, disk_mib=2499, tmpdir=<TBD>
+
+Submitted job 82 with external jobid 'Submitted batch job 12929379'.
+
+[Thu Jul 11 14:51:51 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    jobid: 44
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2589, disk_mib=2470, tmpdir=<TBD>
+
+Submitted job 44 with external jobid 'Submitted batch job 12929380'.
+Select jobs to execute...
+[Thu Jul 11 14:52:00 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 64
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929376
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 64, external: Submitted batch job 12929376, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.64.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:52:01 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 22
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_03.csv_73681.98_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929377
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 22, external: Submitted batch job 12929377, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.22.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:52:01 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 142
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929378
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 142, external: Submitted batch job 12929378, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.142.sh). For error details see the cluster log and the log files of the involved rule(s).
+
+[Thu Jul 11 14:52:01 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    jobid: 4
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2607, disk_mib=2487, tmpdir=<TBD>
+
+Submitted job 4 with external jobid 'Submitted batch job 12929382'.
+Select jobs to execute...
+[Thu Jul 11 14:52:01 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 82
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929379
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 82, external: Submitted batch job 12929379, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.82.sh). For error details see the cluster log and the log files of the involved rule(s).
+
+[Thu Jul 11 14:52:01 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    jobid: 172
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2459, disk_mib=2346, tmpdir=<TBD>
+
+[Thu Jul 11 14:52:01 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 44
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929380
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 44, external: Submitted batch job 12929380, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.44.sh). For error details see the cluster log and the log files of the involved rule(s).
+Submitted job 172 with external jobid 'Submitted batch job 12929383'.
+
+[Thu Jul 11 14:52:01 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    jobid: 156
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2483, disk_mib=2368, tmpdir=<TBD>
+
+Submitted job 156 with external jobid 'Submitted batch job 12929384'.
+Select jobs to execute...
+
+[Thu Jul 11 14:52:01 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    jobid: 66
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2480, disk_mib=2366, tmpdir=<TBD>
+
+Submitted job 66 with external jobid 'Submitted batch job 12929385'.
+
+[Thu Jul 11 14:52:01 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    jobid: 112
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=1000, disk_mib=954, tmpdir=<TBD>
+
+Submitted job 112 with external jobid 'Submitted batch job 12929386'.
+Select jobs to execute...
+[Thu Jul 11 14:52:11 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 4
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_13.csv_84684.53_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929382
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 4, external: Submitted batch job 12929382, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.4.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:52:11 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 172
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929383
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 172, external: Submitted batch job 12929383, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.172.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:52:11 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 156
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929384
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 156, external: Submitted batch job 12929384, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.156.sh). For error details see the cluster log and the log files of the involved rule(s).
+
+[Thu Jul 11 14:52:11 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    jobid: 88
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2522, disk_mib=2406, tmpdir=<TBD>
+
+[Thu Jul 11 14:52:11 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 66
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_34.csv_70733.46_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929385
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 66, external: Submitted batch job 12929385, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.66.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:52:11 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 112
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929386
+
+Submitted job 88 with external jobid 'Submitted batch job 12929387'.
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 112, external: Submitted batch job 12929386, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.112.sh). For error details see the cluster log and the log files of the involved rule(s).
+Select jobs to execute...
+
+[Thu Jul 11 14:52:11 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    jobid: 58
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2557, disk_mib=2439, tmpdir=<TBD>
+
+Submitted job 58 with external jobid 'Submitted batch job 12929388'.
+
+[Thu Jul 11 14:52:11 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    jobid: 84
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5857, disk_mib=5586, tmpdir=<TBD>
+
+Submitted job 84 with external jobid 'Submitted batch job 12929389'.
+
+[Thu Jul 11 14:52:11 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    jobid: 118
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5716, disk_mib=5452, tmpdir=<TBD>
+
+Submitted job 118 with external jobid 'Submitted batch job 12929390'.
+
+[Thu Jul 11 14:52:11 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    jobid: 90
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5919, disk_mib=5645, tmpdir=<TBD>
+
+Submitted job 90 with external jobid 'Submitted batch job 12929391'.
+Select jobs to execute...
+[Thu Jul 11 14:52:21 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 88
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929387
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 88, external: Submitted batch job 12929387, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.88.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:52:21 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 58
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929388
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 58, external: Submitted batch job 12929388, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.58.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:52:21 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 84
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929389
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 84, external: Submitted batch job 12929389, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.84.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:52:21 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 118
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929390
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 118, external: Submitted batch job 12929390, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.118.sh). For error details see the cluster log and the log files of the involved rule(s).
+
+[Thu Jul 11 14:52:21 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    jobid: 170
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5751, disk_mib=5485, tmpdir=<TBD>
+
+[Thu Jul 11 14:52:21 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 90
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_42.csv_80958.91_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929391
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 90, external: Submitted batch job 12929391, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.90.sh). For error details see the cluster log and the log files of the involved rule(s).
+Submitted job 170 with external jobid 'Submitted batch job 12929392'.
+Select jobs to execute...
+
+[Thu Jul 11 14:52:21 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    jobid: 178
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5901, disk_mib=5628, tmpdir=<TBD>
+
+Submitted job 178 with external jobid 'Submitted batch job 12929393'.
+
+[Thu Jul 11 14:52:21 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    jobid: 2
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2562, disk_mib=2444, tmpdir=<TBD>
+
+Submitted job 2 with external jobid 'Submitted batch job 12929394'.
+
+[Thu Jul 11 14:52:21 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    jobid: 36
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5829, disk_mib=5559, tmpdir=<TBD>
+
+Submitted job 36 with external jobid 'Submitted batch job 12929395'.
+
+[Thu Jul 11 14:52:21 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    jobid: 148
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2571, disk_mib=2452, tmpdir=<TBD>
+
+Submitted job 148 with external jobid 'Submitted batch job 12929396'.
+Select jobs to execute...
+[Thu Jul 11 14:52:31 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 170
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929392
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 170, external: Submitted batch job 12929392, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.170.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:52:31 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 178
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929393
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 178, external: Submitted batch job 12929393, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.178.sh). For error details see the cluster log and the log files of the involved rule(s).
+
+[Thu Jul 11 14:52:31 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    jobid: 80
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5726, disk_mib=5461, tmpdir=<TBD>
+
+[Thu Jul 11 14:52:31 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 2
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929394
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 2, external: Submitted batch job 12929394, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.2.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:52:31 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 36
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_06.csv_81469.15_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929395
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 36, external: Submitted batch job 12929395, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.36.sh). For error details see the cluster log and the log files of the involved rule(s).
+Submitted job 80 with external jobid 'Submitted batch job 12929403'.
+[Thu Jul 11 14:52:31 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 148
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929396
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 148, external: Submitted batch job 12929396, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.148.sh). For error details see the cluster log and the log files of the involved rule(s).
+Select jobs to execute...
+
+[Thu Jul 11 14:52:31 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    jobid: 6
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2585, disk_mib=2466, tmpdir=<TBD>
+
+Submitted job 6 with external jobid 'Submitted batch job 12929404'.
+
+[Thu Jul 11 14:52:31 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    jobid: 120
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5785, disk_mib=5518, tmpdir=<TBD>
+
+Submitted job 120 with external jobid 'Submitted batch job 12929405'.
+
+[Thu Jul 11 14:52:31 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    jobid: 96
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2680, disk_mib=2556, tmpdir=<TBD>
+
+Submitted job 96 with external jobid 'Submitted batch job 12929406'.
+
+[Thu Jul 11 14:52:31 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    jobid: 28
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5765, disk_mib=5498, tmpdir=<TBD>
+
+Submitted job 28 with external jobid 'Submitted batch job 12929407'.
+Select jobs to execute...
+[Thu Jul 11 14:52:41 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 80
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_15.csv_75028.51_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929403
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 80, external: Submitted batch job 12929403, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.80.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:52:41 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 6
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_16.csv_89705.03_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929404
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 6, external: Submitted batch job 12929404, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.6.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:52:41 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 120
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929405
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 120, external: Submitted batch job 12929405, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.120.sh). For error details see the cluster log and the log files of the involved rule(s).
+
+[Thu Jul 11 14:52:41 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    jobid: 50
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2477, disk_mib=2363, tmpdir=<TBD>
+
+[Thu Jul 11 14:52:41 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 96
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929406
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 96, external: Submitted batch job 12929406, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.96.sh). For error details see the cluster log and the log files of the involved rule(s).
+Submitted job 50 with external jobid 'Submitted batch job 12929410'.
+[Thu Jul 11 14:52:41 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 28
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_14.csv_85718.53_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929407
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 28, external: Submitted batch job 12929407, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.28.sh). For error details see the cluster log and the log files of the involved rule(s).
+Select jobs to execute...
+
+[Thu Jul 11 14:52:41 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    jobid: 126
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2446, disk_mib=2333, tmpdir=<TBD>
+
+Submitted job 126 with external jobid 'Submitted batch job 12929411'.
+
+[Thu Jul 11 14:52:41 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    jobid: 180
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2414, disk_mib=2303, tmpdir=<TBD>
+
+Submitted job 180 with external jobid 'Submitted batch job 12929412'.
+
+[Thu Jul 11 14:52:41 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    jobid: 140
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2505, disk_mib=2389, tmpdir=<TBD>
+
+Submitted job 140 with external jobid 'Submitted batch job 12929413'.
+
+[Thu Jul 11 14:52:41 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    jobid: 20
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5587, disk_mib=5329, tmpdir=<TBD>
+
+Submitted job 20 with external jobid 'Submitted batch job 12929414'.
+Select jobs to execute...
+[Thu Jul 11 14:52:51 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 50
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_25.csv_72559.26_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929410
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 50, external: Submitted batch job 12929410, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.50.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:52:51 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 126
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_39.csv_58816.3_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929411
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 126, external: Submitted batch job 12929411, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.126.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:52:51 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 180
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_22.csv_82515.87_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929412
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 180, external: Submitted batch job 12929412, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.180.sh). For error details see the cluster log and the log files of the involved rule(s).
+
+[Thu Jul 11 14:52:51 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    jobid: 132
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2443, disk_mib=2330, tmpdir=<TBD>
+
+[Thu Jul 11 14:52:51 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 140
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_10.csv_74418.07_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929413
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 140, external: Submitted batch job 12929413, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.140.sh). For error details see the cluster log and the log files of the involved rule(s).
+Submitted job 132 with external jobid 'Submitted batch job 12929417'.
+[Thu Jul 11 14:52:51 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 20
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929414
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 20, external: Submitted batch job 12929414, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.20.sh). For error details see the cluster log and the log files of the involved rule(s).
+Select jobs to execute...
+
+[Thu Jul 11 14:52:51 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    jobid: 14
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2523, disk_mib=2407, tmpdir=<TBD>
+
+Submitted job 14 with external jobid 'Submitted batch job 12929418'.
+
+[Thu Jul 11 14:52:51 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    jobid: 98
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5828, disk_mib=5559, tmpdir=<TBD>
+
+Submitted job 98 with external jobid 'Submitted batch job 12929419'.
+
+[Thu Jul 11 14:52:51 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    jobid: 174
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=6047, disk_mib=5767, tmpdir=<TBD>
+
+Submitted job 174 with external jobid 'Submitted batch job 12929420'.
+
+[Thu Jul 11 14:52:51 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    jobid: 104
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5834, disk_mib=5564, tmpdir=<TBD>
+
+Submitted job 104 with external jobid 'Submitted batch job 12929421'.
+Select jobs to execute...
+[Thu Jul 11 14:53:01 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 132
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929417
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 132, external: Submitted batch job 12929417, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.132.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:01 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 14
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929418
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 14, external: Submitted batch job 12929418, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.14.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:01 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 98
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929419
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 98, external: Submitted batch job 12929419, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.98.sh). For error details see the cluster log and the log files of the involved rule(s).
+
+[Thu Jul 11 14:53:01 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    jobid: 102
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5606, disk_mib=5347, tmpdir=<TBD>
+
+[Thu Jul 11 14:53:01 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 174
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_40.csv_86244.94_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929420
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 174, external: Submitted batch job 12929420, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.174.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:01 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 104
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929421
+
+Submitted job 102 with external jobid 'Submitted batch job 12929423'.
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 104, external: Submitted batch job 12929421, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.104.sh). For error details see the cluster log and the log files of the involved rule(s).
+Select jobs to execute...
+
+[Thu Jul 11 14:53:01 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    jobid: 74
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5835, disk_mib=5565, tmpdir=<TBD>
+
+Submitted job 74 with external jobid 'Submitted batch job 12929424'.
+
+[Thu Jul 11 14:53:01 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    jobid: 158
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2519, disk_mib=2403, tmpdir=<TBD>
+
+Submitted job 158 with external jobid 'Submitted batch job 12929425'.
+
+[Thu Jul 11 14:53:01 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    jobid: 134
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2403, disk_mib=2292, tmpdir=<TBD>
+
+Submitted job 134 with external jobid 'Submitted batch job 12929426'.
+
+[Thu Jul 11 14:53:01 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    jobid: 110
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5944, disk_mib=5669, tmpdir=<TBD>
+
+Submitted job 110 with external jobid 'Submitted batch job 12929427'.
+Select jobs to execute...
+[Thu Jul 11 14:53:11 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 102
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929423
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 102, external: Submitted batch job 12929423, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.102.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:11 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 74
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929424
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 74, external: Submitted batch job 12929424, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.74.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:11 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 158
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_17.csv_64980.67_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929425
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 158, external: Submitted batch job 12929425, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.158.sh). For error details see the cluster log and the log files of the involved rule(s).
+
+[Thu Jul 11 14:53:11 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    jobid: 124
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2526, disk_mib=2409, tmpdir=<TBD>
+
+[Thu Jul 11 14:53:11 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 134
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_01.csv_81927.22_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929426
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 134, external: Submitted batch job 12929426, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.134.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:11 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 110
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_32.csv_77954.75_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929427
+
+Submitted job 124 with external jobid 'Submitted batch job 12929429'.
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 110, external: Submitted batch job 12929427, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.110.sh). For error details see the cluster log and the log files of the involved rule(s).
+Select jobs to execute...
+
+[Thu Jul 11 14:53:11 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    jobid: 30
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2510, disk_mib=2394, tmpdir=<TBD>
+
+Submitted job 30 with external jobid 'Submitted batch job 12929430'.
+
+[Thu Jul 11 14:53:11 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    jobid: 68
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=1000, disk_mib=954, tmpdir=<TBD>
+
+Submitted job 68 with external jobid 'Submitted batch job 12929431'.
+
+[Thu Jul 11 14:53:11 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    jobid: 52
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5701, disk_mib=5437, tmpdir=<TBD>
+
+Submitted job 52 with external jobid 'Submitted batch job 12929432'.
+
+[Thu Jul 11 14:53:11 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    jobid: 12
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2457, disk_mib=2344, tmpdir=<TBD>
+
+Submitted job 12 with external jobid 'Submitted batch job 12929433'.
+Select jobs to execute...
+[Thu Jul 11 14:53:21 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 124
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929429
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 124, external: Submitted batch job 12929429, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.124.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:21 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 30
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_00.csv_77226.91_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929430
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 30, external: Submitted batch job 12929430, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.30.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:21 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 68
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_44.csv_19085.9_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929431
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 68, external: Submitted batch job 12929431, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.68.sh). For error details see the cluster log and the log files of the involved rule(s).
+
+[Thu Jul 11 14:53:21 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    jobid: 24
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2226, disk_mib=2123, tmpdir=<TBD>
+
+[Thu Jul 11 14:53:21 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 52
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_05.csv_74370.56_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929432
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 52, external: Submitted batch job 12929432, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.52.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:21 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 12
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929433
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 12, external: Submitted batch job 12929433, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.12.sh). For error details see the cluster log and the log files of the involved rule(s).
+Submitted job 24 with external jobid 'Submitted batch job 12929436'.
+Select jobs to execute...
+
+[Thu Jul 11 14:53:22 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    jobid: 40
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2475, disk_mib=2361, tmpdir=<TBD>
+
+Submitted job 40 with external jobid 'Submitted batch job 12929437'.
+
+[Thu Jul 11 14:53:22 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    jobid: 100
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5668, disk_mib=5406, tmpdir=<TBD>
+
+Submitted job 100 with external jobid 'Submitted batch job 12929438'.
+
+[Thu Jul 11 14:53:22 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    jobid: 10
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2527, disk_mib=2410, tmpdir=<TBD>
+
+Submitted job 10 with external jobid 'Submitted batch job 12929439'.
+
+[Thu Jul 11 14:53:22 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    jobid: 34
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5851, disk_mib=5580, tmpdir=<TBD>
+
+Submitted job 34 with external jobid 'Submitted batch job 12929440'.
+Select jobs to execute...
+[Thu Jul 11 14:53:31 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 24
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_36.csv_67076.9_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929436
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 24, external: Submitted batch job 12929436, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.24.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:31 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 40
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_37.csv_69187.24_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929437
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 40, external: Submitted batch job 12929437, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.40.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:31 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 100
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929438
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 100, external: Submitted batch job 12929438, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.100.sh). For error details see the cluster log and the log files of the involved rule(s).
+
+[Thu Jul 11 14:53:32 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    jobid: 114
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2523, disk_mib=2407, tmpdir=<TBD>
+
+[Thu Jul 11 14:53:32 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 10
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_18.csv_80028.45_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929439
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 10, external: Submitted batch job 12929439, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.10.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:32 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 34
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_04.csv_83084.05_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929440
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 34, external: Submitted batch job 12929440, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.34.sh). For error details see the cluster log and the log files of the involved rule(s).
+Submitted job 114 with external jobid 'Submitted batch job 12929445'.
+Select jobs to execute...
+
+[Thu Jul 11 14:53:32 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    jobid: 92
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5826, disk_mib=5557, tmpdir=<TBD>
+
+Submitted job 92 with external jobid 'Submitted batch job 12929446'.
+
+[Thu Jul 11 14:53:32 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    jobid: 70
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2527, disk_mib=2410, tmpdir=<TBD>
+
+Submitted job 70 with external jobid 'Submitted batch job 12929447'.
+
+[Thu Jul 11 14:53:32 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    jobid: 130
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5871, disk_mib=5600, tmpdir=<TBD>
+
+Submitted job 130 with external jobid 'Submitted batch job 12929448'.
+
+[Thu Jul 11 14:53:32 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    jobid: 108
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2486, disk_mib=2371, tmpdir=<TBD>
+
+Submitted job 108 with external jobid 'Submitted batch job 12929449'.
+Select jobs to execute...
+[Thu Jul 11 14:53:42 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 114
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_27.csv_79717.04_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929445
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 114, external: Submitted batch job 12929445, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.114.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:42 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 92
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_29.csv_86325.82_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929446
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 92, external: Submitted batch job 12929446, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.92.sh). For error details see the cluster log and the log files of the involved rule(s).
+
+[Thu Jul 11 14:53:42 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    jobid: 32
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5699, disk_mib=5435, tmpdir=<TBD>
+
+[Thu Jul 11 14:53:42 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 70
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_30.csv_72951.66_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929447
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 70, external: Submitted batch job 12929447, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.70.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:42 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 130
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929448
+
+Submitted job 32 with external jobid 'Submitted batch job 12929450'.
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 130, external: Submitted batch job 12929448, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.130.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:42 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 108
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_08.csv_83708.7_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929449
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 108, external: Submitted batch job 12929449, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.108.sh). For error details see the cluster log and the log files of the involved rule(s).
+Select jobs to execute...
+
+[Thu Jul 11 14:53:42 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    jobid: 138
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5866, disk_mib=5595, tmpdir=<TBD>
+
+Submitted job 138 with external jobid 'Submitted batch job 12929451'.
+
+[Thu Jul 11 14:53:42 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    jobid: 8
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2411, disk_mib=2300, tmpdir=<TBD>
+
+Submitted job 8 with external jobid 'Submitted batch job 12929452'.
+
+[Thu Jul 11 14:53:42 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    jobid: 18
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2563, disk_mib=2445, tmpdir=<TBD>
+
+Submitted job 18 with external jobid 'Submitted batch job 12929453'.
+
+[Thu Jul 11 14:53:42 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    jobid: 146
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2511, disk_mib=2395, tmpdir=<TBD>
+
+Submitted job 146 with external jobid 'Submitted batch job 12929454'.
+Select jobs to execute...
+[Thu Jul 11 14:53:52 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 32
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_07.csv_72677.2_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929450
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 32, external: Submitted batch job 12929450, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.32.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:52 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 138
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_02.csv_72696.32_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929451
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 138, external: Submitted batch job 12929451, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.138.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:52 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 8
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929452
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 8, external: Submitted batch job 12929452, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.8.sh). For error details see the cluster log and the log files of the involved rule(s).
+
+[Thu Jul 11 14:53:52 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    jobid: 38
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2530, disk_mib=2413, tmpdir=<TBD>
+
+[Thu Jul 11 14:53:52 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 18
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_19.csv_68403.06_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929453
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 18, external: Submitted batch job 12929453, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.18.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:53:52 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 146
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929454
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 146, external: Submitted batch job 12929454, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.146.sh). For error details see the cluster log and the log files of the involved rule(s).
+Submitted job 38 with external jobid 'Submitted batch job 12929455'.
+Select jobs to execute...
+
+[Thu Jul 11 14:53:52 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    jobid: 144
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2526, disk_mib=2409, tmpdir=<TBD>
+
+Submitted job 144 with external jobid 'Submitted batch job 12929456'.
+
+[Thu Jul 11 14:53:52 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    jobid: 160
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5836, disk_mib=5566, tmpdir=<TBD>
+
+Submitted job 160 with external jobid 'Submitted batch job 12929457'.
+
+[Thu Jul 11 14:53:52 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    jobid: 42
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5598, disk_mib=5339, tmpdir=<TBD>
+
+Submitted job 42 with external jobid 'Submitted batch job 12929458'.
+
+[Thu Jul 11 14:53:52 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    jobid: 176
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2385, disk_mib=2275, tmpdir=<TBD>
+
+Submitted job 176 with external jobid 'Submitted batch job 12929459'.
+Select jobs to execute...
+[Thu Jul 11 14:54:02 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 38
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_12.csv_78433.0_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929455
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 38, external: Submitted batch job 12929455, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.38.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:54:02 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 144
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_23.csv_75138.27_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929456
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 144, external: Submitted batch job 12929456, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.144.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:54:02 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 160
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_38.csv_99566.17_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929457
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 160, external: Submitted batch job 12929457, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.160.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:54:02 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 42
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_28.csv_72318.91_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929458
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 42, external: Submitted batch job 12929458, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.42.sh). For error details see the cluster log and the log files of the involved rule(s).
+
+[Thu Jul 11 14:54:02 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    jobid: 78
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5944, disk_mib=5669, tmpdir=<TBD>
+
+[Thu Jul 11 14:54:02 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 176
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_11.csv_56459.81_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929459
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 176, external: Submitted batch job 12929459, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.176.sh). For error details see the cluster log and the log files of the involved rule(s).
+Submitted job 78 with external jobid 'Submitted batch job 12929460'.
+Select jobs to execute...
+
+[Thu Jul 11 14:54:02 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    jobid: 150
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=6131, disk_mib=5847, tmpdir=<TBD>
+
+Submitted job 150 with external jobid 'Submitted batch job 12929461'.
+
+[Thu Jul 11 14:54:02 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    jobid: 60
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2489, disk_mib=2374, tmpdir=<TBD>
+
+Submitted job 60 with external jobid 'Submitted batch job 12929462'.
+
+[Thu Jul 11 14:54:02 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    jobid: 116
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5837, disk_mib=5567, tmpdir=<TBD>
+
+Submitted job 116 with external jobid 'Submitted batch job 12929463'.
+
+[Thu Jul 11 14:54:02 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    jobid: 152
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2525, disk_mib=2409, tmpdir=<TBD>
+
+Submitted job 152 with external jobid 'Submitted batch job 12929464'.
+Select jobs to execute...
+[Thu Jul 11 14:54:12 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 78
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_21.csv_88684.05_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929460
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 78, external: Submitted batch job 12929460, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.78.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:54:12 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 150
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_20.csv_90307.79_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929461
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 150, external: Submitted batch job 12929461, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.150.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:54:12 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 60
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_35.csv_82744.47_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929462
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 60, external: Submitted batch job 12929462, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.60.sh). For error details see the cluster log and the log files of the involved rule(s).
+
+[Thu Jul 11 14:54:12 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    jobid: 168
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5983, disk_mib=5706, tmpdir=<TBD>
+
+[Thu Jul 11 14:54:12 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 116
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_24.csv_75481.95_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929463
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 116, external: Submitted batch job 12929463, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.116.sh). For error details see the cluster log and the log files of the involved rule(s).
+Submitted job 168 with external jobid 'Submitted batch job 12929466'.
+[Thu Jul 11 14:54:12 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 152
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_33.csv_75490.06_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929464
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 152, external: Submitted batch job 12929464, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.152.sh). For error details see the cluster log and the log files of the involved rule(s).
+Select jobs to execute...
+
+[Thu Jul 11 14:54:12 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    jobid: 62
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2451, disk_mib=2338, tmpdir=<TBD>
+
+Submitted job 62 with external jobid 'Submitted batch job 12929467'.
+
+[Thu Jul 11 14:54:12 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    jobid: 154
+    reason: Missing output files: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    wildcards: sample=reactions_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=5869, disk_mib=5598, tmpdir=<TBD>
+
+Submitted job 154 with external jobid 'Submitted batch job 12929468'.
+
+[Thu Jul 11 14:54:12 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    jobid: 122
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2512, disk_mib=2396, tmpdir=<TBD>
+
+Submitted job 122 with external jobid 'Submitted batch job 12929469'.
+
+[Thu Jul 11 14:54:12 2024]
+rule rename_compounds_and_reactions:
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    jobid: 128
+    reason: Missing output files: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    wildcards: sample=compounds_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_
+    resources: mem_mb=100000, mem_mib=95368, disk_mb=2451, disk_mib=2338, tmpdir=<TBD>
+
+Submitted job 128 with external jobid 'Submitted batch job 12929470'.
+[Thu Jul 11 14:54:22 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 168
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_41.csv_82971.18_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929466
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 168, external: Submitted batch job 12929466, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.168.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:54:22 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 62
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_26.csv_75825.26_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929467
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 62, external: Submitted batch job 12929467, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.62.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:54:22 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 154
+    input: read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    output: read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet read_mine_results/db_files/renamed_files/reactions_1_generalized_230106_frozen_metadata_for_MINES_split_09.csv_85265.63_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929468
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 154, external: Submitted batch job 12929468, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.154.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:54:22 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 122
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_31.csv_72576.91_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929469
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 122, external: Submitted batch job 12929469, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.122.sh). For error details see the cluster log and the log files of the involved rule(s).
+[Thu Jul 11 14:54:22 2024]
+Error in rule rename_compounds_and_reactions:
+    jobid: 128
+    input: read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    output: read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    shell:
+        
+        time python read_mine_results/db_files/01_renaming_compounds_and_reaction.py read_mine_results/db_files/all_original_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet read_mine_results/db_files/renamed_files/compounds_1_generalized_230106_frozen_metadata_for_MINES_split_43.csv_84305.78_.parquet
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 12929470
+
+Error executing rule rename_compounds_and_reactions on cluster (jobid: 128, external: Submitted batch job 12929470, jobscript: /data/users/pamrein/2024_masterthesis/read-MINE-results/.snakemake/tmp.yy_lo6sv/snakejob.rename_compounds_and_reactions.128.sh). For error details see the cluster log and the log files of the involved rule(s).
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-07-11T145119.261201.snakemake.log
