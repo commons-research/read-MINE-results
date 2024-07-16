@@ -124,7 +124,7 @@ def rename_reactions(reactionfile, suffix, output_file = ""):
         (pl.col("ID") + suffix).alias("ID")
     )
 
-    # Regex pattern to find 'pkc' followed by digits and '[c0]'
+    # Regex pattern to find 'pkc' followed by digits and ends with '[c0]'
     pattern = r"(pkc\d+)(\[c)" 
 
     # Define the replacement expressions for the column "ID equation"
