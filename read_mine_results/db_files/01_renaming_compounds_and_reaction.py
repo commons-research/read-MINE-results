@@ -129,7 +129,6 @@ def rename_reactions(reactionfile, suffix, output_file = ""):
 
     # Define the replacement expressions for the column "ID equation"
     replacement_expr_pkc = pl.col("ID equation").str.replace_all(pattern, r"${1}_XXX-pkc-XXX_${2}") 
- 
     replacement_expr_suffix = pl.col("ID equation").str.replace_all(r"_XXX-pkc-XXX_", suffix) 
 
     # Apply the replacement expression to the specified column
