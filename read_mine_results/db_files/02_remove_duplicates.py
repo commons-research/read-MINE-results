@@ -20,7 +20,7 @@ import re
 import sys
 import re
 
-
+# get the folder via terminal
 path_to_files = sys.argv[1]
 path_to_save = sys.argv[2]
 
@@ -206,8 +206,7 @@ def get_merged_compoundfile(compoundfile, merged_in_compoundfile, equal_columns 
 
     else:
         sys.exit("More duplicates then expected:", check_if_only_duplicates)
-        first_compound_duplicates = list()
-        second_compound_duplicates = list()
+
 
     if info:
         all_compounds = lf_compound.collect(streaming = True).shape[0]
@@ -291,7 +290,7 @@ removed_reactions = list()
 # go through all the files
 for compoundfile1 in compound_files:
 
-    # remove the compound from the list for better performance
+    # remove the compound from the list for better performance (don't check yourself)
     compound_files2.remove(compoundfile1)
 
     for compoundfile2 in compound_files2:
@@ -300,11 +299,11 @@ for compoundfile1 in compound_files:
         filenumber_compound_1 = find_two_chars_after_word(compoundfile1, word = "_split_")
         filenumber_compound_2 = find_two_chars_after_word(compoundfile2, word = "_split_")
 
-        # compounds_dict_to_rename
+        # compounds list which have to be renamed
         first_compound_duplicates, second_compound_duplicates = get_merged_compoundfile(compoundfile1, compoundfile2, info = True)
 
         # If no compounds have to be renamed, also the reactionfiles doesn't have to be renamed
-        if not second_compound_duplicates and not first_compound_duplicates:
+        if not first_compound_duplicates: #not second_compound_duplicates and
             print("no compounds found to rename --> reactions and compounds would not be changed.")
 
         else:
