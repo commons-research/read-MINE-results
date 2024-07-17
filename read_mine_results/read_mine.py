@@ -6,7 +6,7 @@
 # module_path = os.path.abspath(module_path)
 # if module_path not in sys.path:
 #     sys.path.append(module_path)
-# import mymodule
+# import read_mine
 
 
 import polars as pl
@@ -15,7 +15,7 @@ import re
 import sys
 
 
-def lazyread_mines_parquet(parquet_file):
+def lazyread_mines_parquet(parquet_file, info = False):
     """
     Try to read in a parquet file with the filename included "compounds" or "reactions".
 
@@ -32,21 +32,26 @@ def lazyread_mines_parquet(parquet_file):
     # all(substring in item for item in lst)
     # in the moment doesn't works for lists
     if "compounds" in parquet_file:
-        print(f'Compound file - filter for predicted compounds - read in : {parquet_file}')
         lazy_df = (
             pl.scan_parquet(parquet_file)
             .filter(pl.col("Type") == "Predicted")
         )
+        if info:
+            print(f'Compound file - filter for predicted compounds - read in : {parquet_file}')
+
     elif "reactions" in parquet_file:
-        print(f'Reaction file read in : {parquet_file}')
         lazy_df = (
             pl.scan_parquet(parquet_file)
             )
+        if info:
+            print(f'Reaction file read in : {parquet_file}')
+
     else:
-        print(f'other file - read in :\n {parquet_file}')
         lazy_df = (
             pl.scan_parquet(parquet_file)
             )
+        if info:
+            print(f'other file - read in :\n {parquet_file}')
     return lazy_df
 
 
@@ -104,15 +109,19 @@ def find_duplicates_df(files = list(), polar_lf = None, equal_columns = "", info
     if files:
         lf = lazyread_mines_parquet(files)
         df = lf.collect(streaming = True)
-    elif polar_lf:
-        df = polar_lf.collect(streaming = True)
-    else:
-        sys.exit("no file found to read in.")
+    else: 
+        try:
+            df = polar_lf.collect(streaming = True)
+        except ValueError:
+            print("You must enter an polars lazyframe!")
+        except Exception as e:
+            print(f"An error occurred: {e}")
+
 
     # if no columns provided, take all of them
     if not equal_columns:
         equal_columns = df.columns
-        print(f"All columns taken: {equal_columns: _d}")
+        print(f"All columns taken: {equal_columns}")
 
     df_duplicates = df.filter(pl.lit(df.select(equal_columns).is_duplicated())).sort(equal_columns)
 
@@ -122,21 +131,19 @@ def find_duplicates_df(files = list(), polar_lf = None, equal_columns = "", info
     return df_duplicates
 
 
-def get_merged_compoundfile(compoundfile, merged_in_compoundfile, equal_columns = ['Formula', 'InChIKey', 'SMILES'], info = False):
+def get_merged_file(file, merged_in_file, equal_columns = ['Formula', 'InChIKey', 'SMILES'], info = False):
     # load the files in lazyframe
-    lf_compound = lazyread_mines_parquet([compoundfile, merged_in_compoundfile])
+    lf_file = lazyread_mines_parquet([file, merged_in_file])
 
     # find duplicates in compounds
-    duplicated_compounds = find_duplicates_df(polar_lf = lf_compound, equal_columns = equal_columns)
+    duplicated_compounds = find_duplicates_df(polar_lf = lf_file, equal_columns = equal_columns)
 
-    check_if_only_duplicates = lf_compound.group_by(equal_columns).agg(pl.len().alias("count")).select("count").filter(pl.col("count") > 1).unique().collect(streaming = True)
-
-    print("check_if_only_duplicates", check_if_only_duplicates, type(check_if_only_duplicates))
+    check_if_only_duplicates = lf_file.group_by(equal_columns).agg(pl.len().alias("count")).select("count").filter(pl.col("count") > 1).unique().collect(streaming = True)
 
     if check_if_only_duplicates.shape != (1, 1):
         print(f"shape doesn't match: {check_if_only_duplicates.shape}")
-        first_compound_duplicates = list()
-        second_compound_duplicates = list()
+        first_duplicates = list()
+        second_duplicates = list()
     
     elif (int(check_if_only_duplicates.item()) == 2):
         # Because the find_duplicate function searches sorts the compounds depending on the column and we are sure, that only duplicates are found.
@@ -146,59 +153,66 @@ def get_merged_compoundfile(compoundfile, merged_in_compoundfile, equal_columns 
         duplicated_compounds = duplicated_compounds.with_row_index("index")
 
         # Filter for odd indices
-        odd_indices_df = duplicated_compounds.filter(pl.col("index") % 2 != 0).select(pl.col("ID").alias("compound_1"))
+        odd_indices_df = duplicated_compounds.filter(pl.col("index") % 2 != 0).select(pl.col("ID").alias("file_1"))
 
         # Filter for even indices
-        even_indices_df = duplicated_compounds.filter(pl.col("index") % 2 == 0).select(pl.col("ID").alias("compound_2"))
+        even_indices_df = duplicated_compounds.filter(pl.col("index") % 2 == 0).select(pl.col("ID").alias("file_2"))
 
         # Combine the two DataFrames
         combined_df = pl.concat([odd_indices_df, even_indices_df], how="horizontal")
 
         # reorder the files        
-        filenumber_compound_1 = find_two_chars_after_word(compoundfile)
+        filenumber_1 = find_two_chars_after_word(file)
 
         condition_wrong_sorted = (
-            pl.col("compound_2").str.ends_with(filenumber_compound_1)
+            pl.col("file_2").str.ends_with(filenumber_1)
         )
 
         # Apply the filter condition 
-        compounds_to_rename = combined_df.filter(condition_wrong_sorted).select([
-            pl.col("compound_2").alias("compound_1"),
-            pl.col("compound_1").alias("compound_2")
+        entries_to_rename = combined_df.filter(condition_wrong_sorted).select([
+            pl.col("file_2").alias("file_1"),
+            pl.col("file_1").alias("file_2")
         ])
 
-        compounds_to_not_rename = combined_df.filter(~condition_wrong_sorted)
+        entries_to_not_rename = combined_df.filter(~condition_wrong_sorted)
 
-        duplicated_compounds_df = pl.DataFrame({
-            "compound_1": pl.concat([compounds_to_rename.select(["compound_1"]), compounds_to_not_rename.select(["compound_1"])]),
-            "compound_2": pl.concat([compounds_to_rename.select(["compound_2"]), compounds_to_not_rename.select(["compound_2"])])
+        duplicated_df = pl.DataFrame({
+            "file_1": pl.concat([entries_to_rename.select(["file_1"]), entries_to_not_rename.select(["file_1"])]),
+            "file_2": pl.concat([entries_to_rename.select(["file_2"]), entries_to_not_rename.select(["file_2"])])
         })        
 
         # Get odd rows
-        first_compound_duplicates = duplicated_compounds_df["compound_1"].to_list() 
+        first_duplicates = duplicated_df["file_1"].to_list() 
 
         # Get even rows
-        second_compound_duplicates = duplicated_compounds_df["compound_2"].to_list() 
+        second_duplicates = duplicated_df["file_2"].to_list() 
 
     elif (int(check_if_only_duplicates.item()) == 1):
-        first_compound_duplicates = list()
-        second_compound_duplicates = list()
+        first_duplicates = list()
+        second_duplicates = list()
 
     else:
         sys.exit("More duplicates then expected:", check_if_only_duplicates)
 
 
     if info:
-        all_compounds = lf_compound.collect(streaming = True).shape[0]
+        all_compounds = lf_file.collect(streaming = True).shape[0]
         duplicated_compounds = int(duplicated_compounds.shape[0] / 2)
-        unique_compounds = lf_compound.select(equal_columns).unique().collect(streaming = True).shape[0]
+        unique_compounds = lf_file.select(equal_columns).unique().collect(streaming = True).shape[0]
 
-        filename_1 = compoundfile.split("/")[-1]
-        filename_2 = merged_in_compoundfile.split("/")[-1]
+        filename_1 = file.split("/")[-1]
+        filename_2 = merged_in_file.split("/")[-1]
 
-        print(f'File 1: {filename_1},\nFile 2: {filename_2}\nTotal: {all_compounds:_d}\nunique compounds: {unique_compounds:_d} ({duplicated_compounds/all_compounds*100:.2f} % - {duplicated_compounds:_d} duplicates)\n-----')
+        print(f"""
+\n-----
+File 1: {filename_1}
+File 2: {filename_2}
+Total: {all_compounds:_d}
+unique rows: {unique_compounds:_d} ({duplicated_compounds/all_compounds*100:.2f} % - {duplicated_compounds:_d} duplicates)
+-----
+""")
 
-    return first_compound_duplicates, second_compound_duplicates
+    return first_duplicates, second_duplicates
 
 
 def drop_and_save(file, columns_to_drop=list()):
@@ -233,3 +247,63 @@ def drop_and_save(file, columns_to_drop=list()):
     except Exception as e:
         print(f"An error occurred: {e}")
         return None
+
+
+def rename_compounds(compoundfile, suffix, output_file = ""):
+    lf_compounds = lazyread_mines_parquet(compoundfile)
+
+    # Append the suffix to all values in the specified column
+    lf_compounds = lf_compounds.with_columns(
+        (pl.col("ID") + suffix).alias("ID")
+    )
+
+    # Collect the lazy frame to execute the operations
+    df_compounds = lf_compounds.collect()
+
+    if output_file:
+        df_compounds.write_parquet(output_file)
+    
+    return df_compounds
+
+
+def rename_reactions(reactionfile, suffix, output_file = ""):
+
+    # read in reactionfile
+    lf_reactions = lazyread_mines_parquet(reactionfile)
+
+    # Append the suffix to all values in the column "ID"
+    lf_reactions = lf_reactions.with_columns(
+        (pl.col("ID") + suffix).alias("ID")
+    )
+
+    # Regex pattern to find 'pkc' followed by digits and ends with '[c0]'
+    pattern = r"(pkc\d+)(\[c)" 
+
+    # Define the replacement expressions for the column "ID equation"
+    replacement_expr_pkc = pl.col("ID equation").str.replace_all(pattern, r"${1}_XXX-pkc-XXX_${2}") 
+    replacement_expr_suffix = pl.col("ID equation").str.replace_all(r"_XXX-pkc-XXX_", suffix) 
+
+    # Apply the replacement expression to the specified column
+    lf_reactions = lf_reactions.with_columns(replacement_expr_pkc.alias("ID equation"))
+    lf_reactions = lf_reactions.with_columns(replacement_expr_suffix.alias("ID equation"))
+    
+    df_reactions = lf_reactions.collect()
+
+    if output_file:
+        df_reactions.write_parquet(output_file)
+
+    return df_reactions
+
+
+def tsv_to_parquet(filepath):
+    # Read the TSV file into a DataFrame
+    df = pl.read_csv(filepath, separator="\t")
+
+    filename = filepath.split("/")[-1].split(".")[0]
+    directory_path = os.path.dirname(filepath)
+    new_filename = directory_path + "/" + filename + ".parquet"
+
+    # Write the DataFrame to a Parquet file
+    df.write_parquet(new_filename)
+
+    print(new_filename)
