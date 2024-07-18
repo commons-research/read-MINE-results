@@ -19,6 +19,7 @@
 import polars as pl
 import os, sys
 
+# module_path = '/home/pamrein/2024_masterthesis/read-MINE-results/read_mine_results' 
 module_path = '/home/popeye/2024_GitHub_Master_Bioinformatics/read-MINE-results/read_mine_results' 
 module_path = os.path.abspath(module_path)
 if module_path not in sys.path:
