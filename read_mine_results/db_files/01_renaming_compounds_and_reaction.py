@@ -74,3 +74,5 @@ for compoundfile in compound_files:
           
             # drop the value out of the list, if the pair was found
             reaction_files.remove(reactionfile)
+
+            print(f'renamed files: {compoundfile}\t\t{reactionfile}')
