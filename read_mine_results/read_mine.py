@@ -10,9 +10,45 @@
 
 
 import polars as pl
+import numpy as np
 import os
 import re
 import sys
+
+def read_LOTUS_dataset(file_to_sample):
+    df = pl.read_csv(
+        file_to_sample,
+        dtypes={
+            "structure_xlogp": pl.Float32,
+            "structure_cid": pl.UInt32,
+            "organism_taxonomy_ncbiid": pl.UInt32,
+            "organism_taxonomy_ottid": pl.UInt32,
+            "structure_stereocenters_total": pl.UInt32,
+            "structure_stereocenters_unspecified": pl.UInt32,
+        },
+        separator=",",
+        infer_schema_length=50000,
+        null_values=["", "NA"],
+    )
+
+    # print("Before type: ", df["organism_taxonomy_gbifid"].dtype)
+
+    if not df["organism_taxonomy_gbifid"].dtype.is_numeric():
+        df = df.with_columns(
+            pl.col("organism_taxonomy_gbifid")
+            .map_elements(lambda x: np.nan if x.startswith("c(") else x, return_dtype=pl.Float64)
+            .cast(pl.Int32, strict=False)  # Cast with strict=False to allow NaN to be retained
+            .alias("organism_taxonomy_gbifid")
+        )
+    else:
+        df = df.with_columns(
+            pl.col("organism_taxonomy_gbifid")
+            .cast(pl.Int32, strict=False)  # Cast with strict=False to allow NaN to be retained
+            .alias("organism_taxonomy_gbifid")
+        )
+
+    # print("After type: ", df["organism_taxonomy_gbifid"].dtype)
+    return df
 
 
 def lazyread_mines_parquet(parquet_file, info = False):

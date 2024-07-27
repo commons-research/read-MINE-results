@@ -4,8 +4,9 @@
 
 
 #SBATCH --partition=pibu_el8
-#SBATCH --mem=900G
-#SBATCH --time=3-10:00:00
+#SBATCH --cpus-per-task=50
+#SBATCH --mem=500G
+#SBATCH --time=5-10:00:00
 #SBATCH --job-name="remove and rename duplicates"
 #SBATCH --mail-user=pascal.amrein@unifr.ch
 #SBATCH --mail-type=begin,end,fail
@@ -26,14 +27,15 @@ echo "Current working directory: $(pwd)"
 
 
 
-#input_rename="/home/pamrein/2024_masterthesis/read-MINE-results/read_mine_results/db_files/all_original_files/"
-#output_rename="/home/pamrein/2024_masterthesis/read-MINE-results/read_mine_results/db_files/renamed_files/"
-#time python 01_renaming_compounds_and_reaction.py ${input_rename} ${output_rename} > info.out 2>&1 
+input_rename="/home/pamrein/2024_masterthesis/MINE-Database/data/output/metacyc_generalized/20240724_lotus_generalized_n50/"
+output_rename="/home/pamrein/2024_masterthesis/read-MINE-results/read_mine_results/db_files/20240728_renamed_files/"
+time python 01_renaming_compounds_and_reaction.py ${input_rename} ${output_rename}
 
 
-input_duplicates="/home/pamrein/2024_masterthesis/read-MINE-results/read_mine_results/db_files/renamed_files/"
-output_duplicates="/home/pamrein/2024_masterthesis/read-MINE-results/read_mine_results/db_files/cleaned_files/"
-time python 02_remove_duplicates.py ${input_duplicates} ${output_duplicates} >> info.out 2>&1 
+input_duplicates=$output_rename
+output_duplicates="/home/pamrein/2024_masterthesis/read-MINE-results/read_mine_results/db_files/20240728_cleaned_files/"
+time python 02_remove_duplicates.py ${input_duplicates} ${output_duplicates}
 
 # Deactivate the micromamba environment
 micromamba deactivate
+
