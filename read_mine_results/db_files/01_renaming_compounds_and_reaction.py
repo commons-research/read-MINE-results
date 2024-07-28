@@ -40,6 +40,9 @@ pl.Config(fmt_str_lengths=550)
 # get all filenames with path
 filenames = rm.get_files_in_folder(path_to_files)
 
+# generate a list of already saved files
+filenames_stored = rm.existing_files(path_to_save)
+
 # filter out the compound and reaction files
 reaction_files = []
 compound_files = []
@@ -48,13 +51,17 @@ for file in filenames:
 
     # get the filename (last element)
     filename = file.split("/")[-1]
+
+    if filename in filenames_stored:
+        print(f"{filename} already exist.")
+        continue
     
     # get all the compounds
-    if "reactions" in filename:
+    elif "reactions" in filename:
         reaction_files.append(filename)
 
     # get all the reactions
-    if "compounds" in filename:
+    elif "compounds" in filename:
         compound_files.append(filename)
 
 

@@ -4,7 +4,7 @@
 
 
 #SBATCH --partition=pibu_el8
-#SBATCH --cpus-per-task=50
+#SBATCH --cpus-per-task=75
 #SBATCH --mem=500G
 #SBATCH --time=5-10:00:00
 #SBATCH --job-name="remove and rename duplicates"

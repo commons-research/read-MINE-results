@@ -15,8 +15,7 @@
 
 
 import polars as pl
-import os
-import sys
+import os, sys, math
 
 module_path = '/home/pamrein/2024_masterthesis/read-MINE-results/read_mine_results' 
 # module_path = '/home/popeye/2024_GitHub_Master_Bioinformatics/read-MINE-results/read_mine_results' 
@@ -36,25 +35,46 @@ pl.Config(fmt_str_lengths=550)
 
 # get all filenames with path
 filenames = rm.get_files_in_folder(path_to_files)
+filename_in_output_path = rm.existing_files(path_to_save)
+
+for file in filenames:
+    # get the filename (last element)
+    filename = file.split("/")[-1]
+
+    if filename in filename_in_output_path:
+        continue
+    
+    # get all the compounds
+    elif "reactions" in filename:
+        rm.drop_and_save(file, columns_to_drop = ["Name"], save_in_folder = path_to_save)
+
+    # get all the reactions
+    elif "compounds" in filename:
+        rm.drop_and_save(file, columns_to_drop = ["Generation"], save_in_folder = path_to_save)
+
+print(f"files saved in: {path_to_save}")
+
+filenames_new = rm.get_files_in_folder(path_to_files)
 
 # filter out the compound and reaction files
 reaction_files = []
 compound_files = []
 
-for file in filenames:
-
+for file in filenames_new:
     # get the filename (last element)
     filename = file.split("/")[-1]
     
     # get all the compounds
     if "reactions" in filename:
         reaction_files.append(file)
-        rm.drop_and_save(file, columns_to_drop = ["Name"])
 
     # get all the reactions
     if "compounds" in filename:
         compound_files.append(file)
-        rm.drop_and_save(file, columns_to_drop = ["Generation"])
+
+print(f"""files to remove duplicates: {len(reaction_files)} reaction files and {len(compound_files)} compound files.
+total iterations: {math.comb(len(compound_files), 2)}""")
+
 
 # sort the lists
 reaction_files.sort()
@@ -62,6 +82,7 @@ compound_files.sort()
 
 compound_files2 = compound_files.copy()
 
+# for the statistics in the end
 removed_compounds = list()
 renamed_compounds = list()
 removed_reactions = list()
