@@ -54,7 +54,7 @@ for file in filenames:
 
 print(f"files saved in: {path_to_save}")
 
-filenames_new = rm.get_files_in_folder(path_to_files)
+filenames_new = rm.get_files_in_folder(path_to_save)
 
 # filter out the compound and reaction files
 reaction_files = []
